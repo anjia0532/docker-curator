@@ -1,0 +1,1 @@
+0 0 * * * curator --config /config/config_file.yml /config/action_file.yml
