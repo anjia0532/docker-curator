@@ -16,7 +16,7 @@ version: '2'
 services:
 
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:5.5.2
+    image: docker.elastic.co/elasticsearch/elasticsearch:x.y.z
     ports:
     - 9200:9200/tcp
     #environment:
