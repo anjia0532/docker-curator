@@ -28,6 +28,8 @@ services:
     #volumes:
     #    - /data/path/to/host/:/usr/share/elasticsearch/data
 
+  # default version :latest 
+  # more information https://hub.docker.com/repository/docker/anjia0532/docker-curator/tags?page=1&ordering=last_updated
   curator:
     image: anjia0532/docker-curator
     environment:
