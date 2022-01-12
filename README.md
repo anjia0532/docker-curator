@@ -148,7 +148,6 @@ actions:
 ## config_file.yml
 ### env default value
 - USE_SSL: False
-- HTTP_AUTH: ''
 - TIMEOUT: 120
 - MASTER_ONLY: True
 
@@ -166,7 +165,6 @@ client:
   client_cert:
   client_key:
   ssl_no_validate: False
-  http_auth: ${HTTP_AUTH:''}
   timeout: ${TIMEOUT:120}
   master_only: ${MASTER_ONLY:True}
 logging:
