@@ -13,6 +13,8 @@ docker hub  https://hub.docker.com/r/anjia0532/docker-curator/
 
 **My Curator Image** : [anjia0532/docker-curator](https://hub.docker.com/repository/docker/anjia0532/docker-curator/tags)
 
+**Curator is breaking into version dependent releases. Curator 6.x will work with Elasticsearch 6.x, Curator 7.x will work with Elasticsearch 7.x, Curator 8.x will work with Elasticsearch 8.x**
+
 # Usage
 
 ## docker-compose.yml
