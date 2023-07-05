@@ -8,6 +8,11 @@ the docker image for [curator][] baseon the [python:3.6-alpine][](this image siz
 docker hub  https://hub.docker.com/r/anjia0532/docker-curator/ 
 
 [![Automated build](https://img.shields.io/docker/automated/anjia0532/docker-curator.svg)](https://hub.docker.com/r/anjia0532/docker-curator/) [![Docker Pulls](https://img.shields.io/docker/pulls/anjia0532/docker-curator.svg)](https://hub.docker.com/v2/repositories/anjia0532/docker-curator/)
+
+**Elastic Curator Official Image** : [untergeek/curator](https://hub.docker.com/r/untergeek/curator/tags)
+
+**My Curator Image** : [anjia0532/docker-curator](https://hub.docker.com/repository/docker/anjia0532/docker-curator/tags)
+
 # Usage
 
 ## docker-compose.yml
@@ -155,6 +160,7 @@ actions:
 ---
 # Remember, leave a key empty if there is no value.  None will be a string,
 # not a Python "NoneType"
+# old version
 client:
   hosts:
     - ${ES_HOST:127.0.0.1}
@@ -167,6 +173,32 @@ client:
   ssl_no_validate: False
   timeout: ${TIMEOUT:120}
   master_only: ${MASTER_ONLY:True}
+
+# curator 7+ version
+elasticsearch:
+  client:
+    hosts: https://127.0.0.1:9200
+    cloud_id:
+    bearer_auth:
+    opaque_id:
+    request_timeout: ${TIMEOUT:120}
+    http_compress:
+    verify_certs:
+    ca_certs:
+    client_cert:
+    client_key:
+    ssl_assert_hostname:
+    ssl_assert_fingerprint:
+    ssl_version:
+  other_settings:
+    master_only: ${MASTER_ONLY:True}
+    skip_version_test:
+    username:
+    password:
+    api_key:
+      id:
+      api_key:
+
 logging:
   loglevel: INFO
   logfile:
