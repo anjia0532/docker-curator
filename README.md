@@ -179,13 +179,13 @@ client:
 # curator 7+ version
 elasticsearch:
   client:
-    hosts: https://127.0.0.1:9200
+    hosts: http://${ES_HOST:127.0.0.1}:9200
     cloud_id:
     bearer_auth:
     opaque_id:
     request_timeout: ${TIMEOUT:120}
     http_compress:
-    verify_certs:
+    verify_certs: False
     ca_certs:
     client_cert:
     client_key:
