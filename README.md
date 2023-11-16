@@ -162,7 +162,7 @@ actions:
 ---
 # Remember, leave a key empty if there is no value.  None will be a string,
 # not a Python "NoneType"
-# old version
+# old version 5.x-7.x
 client:
   hosts:
     - ${ES_HOST:127.0.0.1}
@@ -176,7 +176,7 @@ client:
   timeout: ${TIMEOUT:120}
   master_only: ${MASTER_ONLY:True}
 
-# curator 7+ version
+# curator 8.0+ version
 elasticsearch:
   client:
     hosts: http://${ES_HOST:127.0.0.1}:9200
