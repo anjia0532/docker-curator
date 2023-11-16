@@ -179,7 +179,7 @@ client:
 # curator 8.0+ version
 elasticsearch:
   client:
-    hosts: http://${ES_HOST:127.0.0.1}:9200
+    hosts: ${ES_HOST}
     cloud_id:
     bearer_auth:
     opaque_id:
